@@ -1,5 +1,5 @@
 {
-  "name": "idyll-app",
+  "name": "electron-test-app",
   "version": "1.0.0",
   "description": "",
   "main": "app/main.js",
@@ -23,7 +23,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "WTFPL",
   "dependencies": {
     "electron": "^1.6.7",
     "electron-prebuilt": "^1.4.13",
