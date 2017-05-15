@@ -7,7 +7,6 @@ First test with a sorta universal-ish app. Uses browserify. React. Live reloadin
 Organization still isn't totally clean, but it's a start. To run it:
 
 ```bash
-$ npm run build:lr
 $ npm run watch
 $ npm run start
 ```
