@@ -11,6 +11,8 @@
     "build:html": "node scripts/build-html.js --electron > app/index.html",
     "build:dev:html": "node scripts/build-html.js --electron --dev > app/index.html",
     "build:dev:lr": "browserify scripts/livereload.js | uglifyjs -cm > app/livereload.bundle.js",
+    "build:web": "node scripts/build-html.js > docs/index.html",
+    "bundle:web": "browserify app/app.js -g [ envify --NODE_ENV production ] -g uglifyify -p bundle-collapser/plugin -t [ babelify --presets [ es2015 react ] ] | uglifyjs -cm > docs/app.bundle.js",
     "bundle:renderer": "browserify app/app.js -g [ envify --NODE_ENV production ] -g uglifyify -p bundle-collapser/plugin -t [ babelify --presets [ es2015 react ] ] | uglifyjs -cm > app/app.bundle.js",
     "bundle": "browserify --ignore-missing --no-builtins --no-commondir --insert-global-vars=\"global\" --no-browser-field app/main.js > main.bundle.js",
     "pack-linux-ia32": "electron-packager . --asar --overwrite --platform=linux --arch=ia32 --icon=assets/app-icon/png/64.png --prune=true --out=build",
