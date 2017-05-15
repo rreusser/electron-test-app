@@ -8,7 +8,7 @@ var argv = require('minimist')(process.argv.slice(2), {
   boolean: ['electron']
 });
 
-var b = budo(path.join(__dirname, '..', 'app', 'app.js'), {
+var b = budo(path.join(__dirname, '..', 'app', 'renderer.js'), {
   host: 'localhost',
   port: 8000,
   open: !argv.electron,
@@ -18,7 +18,7 @@ var b = budo(path.join(__dirname, '..', 'app', 'app.js'), {
     return html({dev: true, electron: !!argv.electron})
   },
   watchGlob: '**/*.{html,css,js}',
-  dir: 'app',
+  dir: ['app', 'assets'],
   browserify: {
     transform: [
       ['babelify', {presets: ['es2040', 'react']}]

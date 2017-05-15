@@ -8,14 +8,14 @@ var fs = require('fs');
 module.exports = function (opts) {
   opts = opts || {};
 
-  var opts = {
+  var htmlOpts = {
     body: '<div id="root"></div>',
   }
 
-  opts.script = opts.dev ? 'http://localhost:8000/app.js' : 'app.bundle.js';
-  opts.scriptAsync = false;
+  htmlOpts.script = opts.dev ? 'http://localhost:8000/renderer.js' : 'renderer.bundle.js';
+  htmlOpts.scriptAsync = false;
 
-  var ret = from([html(opts)])
+  var ret = from([html(htmlOpts)])
 
   if (opts.dev) {
     if (opts.electron) {
