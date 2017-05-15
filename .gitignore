@@ -4,3 +4,4 @@ test
 app/livereload.bundle.js
 app/app.bundle.js
 app/index.html
+app/renderer.bundle.js

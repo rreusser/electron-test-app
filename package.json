@@ -19,7 +19,7 @@
     "pack-win32-ia32": "electron-packager . --asar  --overwrite --platform=win32 --arch=ia32 --icon=assets/app-icon/win/app.ico --prune=true --out=build --version-string.ProductName='vmd'",
     "pack-win32-x64": "electron-packager . --asar  --overwrite --platform=win32 --arch=x64 --icon=assets/app-icon/win/app.ico --prune=true --out=build --version-string.ProductName='vmd'",
     "pack-mac": "electron-packager . --asar --overwrite --platform=darwin --arch=x64 --icon=assets/app-icon/mac/app.icns --prune=true --out=build",
-    "package": "npm run build:html && npm run pack-linux-ia32 && npm run pack-linux-x64 && npm run pack-win32-ia32 && npm run pack-win32-x64 && npm run pack-mac"
+    "package": "npm run bundle:renderer && npm run build:html && npm run pack-linux-ia32 && npm run pack-linux-x64 && npm run pack-win32-ia32 && npm run pack-win32-x64 && npm run pack-mac"
   },
   "keywords": [],
   "author": "",
